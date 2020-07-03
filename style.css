@@ -1,0 +1,41 @@
+html {
+  font-family: "Lucida Console", Monaco, monospace;
+  text-align: center;
+  color: #967bb6; /*lavendar*/
+}
+
+body {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #e6e6fa; /*pale lavendar*/
+}
+
+input {
+  font-family: "Lucida Console", Monaco, monospace;
+  padding-top: 30px;
+  width: 500px;
+  height: 60px;
+  font-size: 30px;
+  border: 0;
+  background: transparent;
+  color: #808080;
+  /*color: #cf71af; /*magenta*/
+}
+
+input:focus {
+  /*Clear the outline on the input box*/
+  outline: none;
+}
+
+li {
+  text-align: left;
+  font-size: 20px;
+  list-style: none;
+  margin: 0;
+  color:
+}
+
+li:hover {
+  text-decoration: line-through;
+  color: #808080; /*grey*/
+}
