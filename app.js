@@ -8,28 +8,37 @@ function newItem(){
   /*Store the list element in a var*/
   var list = document.getElementById("list");
 
-  var li = document.createElement("li");
-  // note: og tutorial said to add a "-" in front but it automatically creates a bullet for me
+  var oldList = localStorage.getItem(list);
+  if (oldList != null){
+    list.appendChild(document.createTextNode(oldList));
+  }
+
+
+  var el = document.createElement("li");
+
   /* access the li var. append a new:
       create a "textnode" that has a - then the item var we stored earlier*/
-  li.appendChild(document.createTextNode("☀ " + item));
+  el.appendChild(document.createTextNode("☀ " + item));
 
   /*add it to the list!*/
-  list.appendChild(li);
+  list.appendChild(el);
+  /*Save in local storage*/
+  localStorage.setItem(list);
 
   /*Clear the text in the box*/
   document.getElementById("input").value = " ";
 
   /*Remove item when the li element is clicked*/
-  li.onclick = removeItem;
+  el.onclick = removeItem;
 
-  localStorage.setItem(list);
+
 }
 
 
 function removeItem(e) {
   // when the funcition is called on an item (e) it will get stored in e.target, then is remove() d
-  e.target.remove();
+  // e.target.remove();
+  localStorage.removeItem(e);
 }
 
 document.body.onkeyup = function(e) {
