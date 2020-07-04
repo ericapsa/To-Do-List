@@ -1,4 +1,5 @@
 function newItem(){
+
   console.log("Inside newItem");
   /*Store the item (get the id element, then access value. store that.)*/
   var item = document.getElementById("input").value;
@@ -21,6 +22,8 @@ function newItem(){
 
   /*Remove item when the li element is clicked*/
   li.onclick = removeItem;
+
+  localStorage.setItem(list);
 }
 
 
